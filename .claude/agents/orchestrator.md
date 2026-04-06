@@ -118,38 +118,47 @@ tools: Read, Write, Bash, Glob, Agent
 
 ### Step 9: 최종 결과물 저장
 
-최종 결과물을 Markdown 파일로 `output/` 폴더에 저장한다:
-- 파일명: `output/[실험명]_[prelab|postlab].md`
-- 구성:
-  ```markdown
-  # [실험명] [pre/post-lab] 레포트
+최종 결과물을 다음 순서로 저장한다:
 
-  ## 문항 1. [문항 내용]
-  [답변]
+1. Markdown 중간 파일을 `tmp/` 폴더에 저장한다:
+   - 파일명: `tmp/[실험명]_[prelab|postlab]_final.md`
+   - 구성:
+     ```markdown
+     # [실험명] [pre/post-lab] 레포트
 
-  $$[LaTeX 수식]$$
+     ## 문항 1. [문항 내용]
+     [답변]
 
-  ## 문항 2. [문항 내용]
-  [답변]
+     $$[LaTeX 수식]$$
 
-  ---
+     ## 문항 2. [문항 내용]
+     [답변]
 
-  ## 사진/그림 삽입 추천
-  | 위치 | 추천 이미지 | 출처 |
-  |------|-------------|------|
-  | ... | ... | ... |
+     ---
 
-  ## 참고문헌
-  [1] ...
-  [2] ...
-  ```
+     ## 사진/그림 삽입 추천
+     | 위치 | 추천 이미지 | 출처 |
+     |------|-------------|------|
+     | ... | ... | ... |
+
+     ## 참고문헌
+     [1] ...
+     [2] ...
+     ```
+
+2. Bash 도구로 pandoc을 사용하여 .docx 파일로 변환한다:
+   ```
+   pandoc tmp/[실험명]_[prelab|postlab]_final.md -o output/[실험명]_[prelab|postlab].docx --mathml
+   ```
+   - LaTeX 수식이 Word 수식 편집기 호환 형식으로 자동 변환된다
+   - pandoc이 설치되지 않은 경우: `brew install pandoc` 안내 후 중단
 
 ---
 
 ## 출력
 
-- `output/[실험명]_[prelab|postlab].md` — 최종 레포트
-- `output/[실험명]_references.md` — 참고문헌 목록 (별도 파일)
+- `output/[실험명]_[prelab|postlab].docx` — 최종 레포트 (Word 파일)
+- `tmp/[실험명]_[prelab|postlab]_final.md` — 중간 Markdown 파일 (참고용)
 
 ---
 
