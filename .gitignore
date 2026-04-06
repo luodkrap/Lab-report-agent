@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# 개인 입력 자료 (PDF, docx, xlsx 등 실제 파일)
+input/jokbo/*
+input/data/*
+input/form/*
+input/form/*
+input/lecture/*
+input/manual/*
+
+# 출력물 및 임시 파일
+output/*
+!output/README.txt
+tmp/*
