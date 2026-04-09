@@ -9,6 +9,10 @@ input/form/*
 input/lecture/*
 input/manual/*
 
+# Python 캐시
+__pycache__/
+*.pyc
+
 # 출력물 및 임시 파일
 output/*
 !output/README.txt

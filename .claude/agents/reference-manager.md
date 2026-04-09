@@ -21,6 +21,7 @@ tools: Read, Write
 ## 입력
 
 Orchestrator로부터 다음을 전달받는다:
+
 - 사용된 입력 파일 목록 (파일명, 유형)
 - 이론 정리 내용 (`tmp/theory_notes.md`) — 추가 참고문헌 파악용
 
@@ -32,31 +33,35 @@ Orchestrator로부터 다음을 전달받는다:
 
 `input/` 폴더의 파일을 다음 유형별로 처리한다:
 
-| 유형 | 처리 방법 |
-|------|-----------|
+| 유형        | 처리 방법                                  |
+| ----------- | ------------------------------------------ |
 | 실험 매뉴얼 | 발행 기관(학교/학과), 파일명 기반으로 작성 |
-| 강의안 | 교수명(가능 시), 과목명, 학기 정보로 작성 |
-| 족보 | 참고문헌으로 포함하지 않음 |
+| 강의안      | 교수명(가능 시), 과목명, 학기 정보로 작성  |
+| 족보        | 참고문헌으로 포함하지 않음                 |
 
 ### 2. 추가 참고문헌 제안
 
 이론 정리에서 인용된 개념과 수식을 바탕으로 표준 교재를 제안한다:
 
 #### 열전달 분야
-- Incropera, F.P., DeWitt, D.P., Bergman, T.L., Lavine, A.S., *Fundamentals of Heat and Mass Transfer*, 7th ed., Wiley, 2011.
-- 강신형 외, *열전달*, 청문각, 2010.
+
+- Incropera, F.P., DeWitt, D.P., Bergman, T.L., Lavine, A.S., _Fundamentals of Heat and Mass Transfer_, 7th ed., Wiley, 2011.
+- 강신형 외, _열전달_, 청문각, 2010.
 
 #### 기계진동 분야
-- Rao, S.S., *Mechanical Vibrations*, 6th ed., Pearson, 2018.
-- 박영필 외, *기계진동학*, 청문각, 2013.
+
+- Rao, S.S., _Mechanical Vibrations_, 6th ed., Pearson, 2018.
+- 박영필 외, _기계진동학_, 청문각, 2013.
 
 #### 유체역학 분야
-- Munson, B.R., Young, D.F., Okiishi, T.H., *Fundamentals of Fluid Mechanics*, 8th ed., Wiley, 2016.
-- 유정열 외, *유체역학*, 청문각, 2011.
+
+- Munson, B.R., Young, D.F., Okiishi, T.H., _Fundamentals of Fluid Mechanics_, 8th ed., Wiley, 2016.
+- 유정열 외, _유체역학_, 청문각, 2011.
 
 #### 동역학 분야
-- Hibbeler, R.C., *Engineering Mechanics: Dynamics*, 14th ed., Pearson, 2016.
-- Beer, F.P., Johnston, E.R., *Vector Mechanics for Engineers: Dynamics*, 12th ed., McGraw-Hill, 2018.
+
+- Hibbeler, R.C., _Engineering Mechanics: Dynamics_, 14th ed., Pearson, 2016.
+- Beer, F.P., Johnston, E.R., _Vector Mechanics for Engineers: Dynamics_, 12th ed., McGraw-Hill, 2018.
 
 ### 3. 참고문헌 번호 부여
 
@@ -67,31 +72,37 @@ Orchestrator로부터 다음을 전달받는다:
 ## 인용 형식 (한국기계학회 기준)
 
 ### 학술지 논문
+
 ```
 저자명, 저자명, "논문 제목", 한국기계학회논문집, 권, 호, pp. 시작페이지-끝페이지, 연도.
 ```
 
 ### 교재(단행본)
+
 ```
 저자명, 저자명, 『교재명』, 출판사, 연도.
 ```
 
 ### 영문 교재
+
 ```
 저자 성, 이름 이니셜., 저자 성, 이름 이니셜., Title of Book, Edition, Publisher, Year.
 ```
 
 ### 강의 자료
+
 ```
 교수명, "[과목명] 강의안", 학교명, 학기, 연도.
 ```
 
 ### 실험 매뉴얼
+
 ```
 [발행 기관], "[실험명] 실험 매뉴얼", [학교명] [학과명], 연도.
 ```
 
 ### 웹 자료
+
 ```
 저자명, "페이지 제목", URL, 접속일: YYYY.MM.DD.
 ```

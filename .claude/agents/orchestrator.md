@@ -100,6 +100,17 @@ tools: Read, Write, Bash, Glob, Agent
   - **최대 재시도: 2회**
   - 2회 재시도 후에도 미흡하면 Reviewer 코멘트를 결과물에 포함하고 사용자에게 수동 수정을 안내
 
+### Step 6.5: Visualizer 호출
+
+`@visualizer` 에이전트를 호출하여 다음을 전달한다:
+- 실험 데이터 (CSV, xlsx 추출 결과)
+- 최종 답변 텍스트 (어떤 그래프가 필요한지 파악용)
+- 실험 종류 및 문항 정보
+
+**결과**: `tmp/figures/` 에 PNG 그래프 파일들 + 캡션 목록
+
+> 생성된 그래프는 최종 Markdown 파일에 `![캡션](figures/파일명.png)` 형식으로 삽입한다.
+
 ### Step 7: Image Recommender 호출
 
 `@image-recommender` 에이전트를 호출하여 다음을 전달한다:
@@ -171,3 +182,5 @@ tools: Read, Write, Bash, Glob, Agent
 - 에이전트 호출 순서를 반드시 지킨다 (의존성 있음)
 - Reviewer 재시도는 최대 2회까지만 허용한다
 - 각 단계의 진행 상황을 사용자에게 간략히 알려준다
+- 시각화(그래프, 차트)가 답변 품질을 높일 수 있는 경우, Visualizer를 호출하여 Python으로 생성한다
+- 생성된 그래프는 `tmp/figures/`에 저장하고, 최종 Markdown에 `![캡션](figures/파일명.png)` 형식으로 삽입한다
