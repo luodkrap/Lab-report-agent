@@ -20,7 +20,11 @@ tools: Read, Write
 
 ## 입력
 
-Orchestrator로부터 족보 원문 텍스트를 전달받는다.
+Orchestrator로부터 `tmp/jokbo_text.md` 파일 경로를 전달받는다.
+
+이 파일은 **Input Analyzer가 `input/jokbo/`의 PDF·Word·이미지(스캔본 포함)에서 추출한 원문 텍스트**다. 본 에이전트는 `Read` 도구로 해당 파일을 직접 읽어 분석을 수행한다 — `input/jokbo/`를 직접 참조하지 않는다.
+
+`tmp/jokbo_text.md` 파일이 존재하지 않거나 비어 있으면 기본 한국어 공학 보고서 문체 가이드를 작성한다.
 
 ---
 
